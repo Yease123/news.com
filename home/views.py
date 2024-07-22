@@ -24,4 +24,9 @@ def Currentaffair(request):
     news_model=News.objects.filter(category="currentaffair").order_by('-date')
     context={"data":news_model}
     return render(request,"Currentaffair.html",context)
+def read(request,pk):
+      news_model=News.objects.get(id=pk)
+      context={"data":news_model}
+      return render(request,"fullnews.html",context)
+
 

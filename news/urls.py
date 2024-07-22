@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import Home,Entertainment,Currentaffair,Politics,Sports
+from home.views import Home,Entertainment,Currentaffair,Politics,Sports,read
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
@@ -26,4 +26,5 @@ urlpatterns = [
     path('Currentaffair/', Currentaffair,name="Currentaffair"),
     path('Politics/', Politics,name="Politics"),
     path('Sports/', Sports,name="Sports"),
+    path('read/<int:pk>/', read,name="read"),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

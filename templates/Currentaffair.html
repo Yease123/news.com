@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{i.headline}}</h5>
                         <p class="card-text">{{i.description}}</p>
-                        <a href="#" class="btn btn-primary">Read full News</a>
+                        <a href="{% url 'read' pk=i.id %}"  class="btn btn-primary">Read full News</a>
                         <div class="card-footer text-body-secondary">
                             News of:{{i.date}}
                            </div>

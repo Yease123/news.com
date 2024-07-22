@@ -15,3 +15,5 @@ class News(models.Model):
         ('currentaffair', 'currentaffair'),
     ])
     date=models.DateField(default=timezone.now())
+    author=models.CharField(max_length=30,null=True,blank=True)
+    fulldescription=models.TextField(null=True,blank=True)
